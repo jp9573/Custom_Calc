@@ -1,0 +1,262 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/txtScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif"
+        android:gravity="right|center_vertical"
+        android:padding="10dp"
+        android:text="@string/_0"
+        android:scrollbars = "vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScreen">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_7"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_8"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_9"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnCE"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_orange"
+                android:fontFamily="sans-serif"
+                android:text="@string/ce"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_orange"
+                android:fontFamily="sans-serif"
+                android:text="@string/cl"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_size_30" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_4"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnFive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_5"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_6"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnModulo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/modulo"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/division"
+                android:textSize="@dimen/default_size_30" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_1"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_2"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_3"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnPower"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/power"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/multiply"
+                android:textSize="@dimen/default_size_30" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnZero"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="2"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/_0"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/dot"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/minus"
+                android:textSize="@dimen/default_size_30" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/button_silver"
+                android:fontFamily="sans-serif"
+                android:text="@string/plus"
+                android:textSize="@dimen/default_size_30" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="sans-serif"
+                android:text="@string/equals"
+                android:textSize="@dimen/default_size_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
