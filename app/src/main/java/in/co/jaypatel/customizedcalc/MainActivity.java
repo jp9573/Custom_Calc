@@ -16,8 +16,8 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int[] numericButtons = {R.id.btnZero, R.id.btnOne, R.id.btnTwo, R.id.btnThree, R.id.btnFour, R.id.btnFive, R.id.btnSix, R.id.btnSeven, R.id.btnEight, R.id.btnNine};
-    private int[] operatorButtons = {R.id.btnAdd, R.id.btnSubtract, R.id.btnMultiply, R.id.btnDivide, R.id.btnModulo, R.id.btnPower};
+    private final int[] numericButtons = {R.id.btnZero, R.id.btnOne, R.id.btnTwo, R.id.btnThree, R.id.btnFour, R.id.btnFive, R.id.btnSix, R.id.btnSeven, R.id.btnEight, R.id.btnNine};
+    private final int[] operatorButtons = {R.id.btnAdd, R.id.btnSubtract, R.id.btnMultiply, R.id.btnDivide, R.id.btnModulo, R.id.btnPower};
     private TextView txtScreen;
     private boolean lastNumeric;
     private boolean stateError;
@@ -27,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         txtScreen = findViewById(R.id.txtScreen);
+        // making textView scrollable
         txtScreen.setMovementMethod(new ScrollingMovementMethod());
+
         setNumericOnClickListener();
         setOperatorOnClickListener();
+
         if (savedInstanceState == null) {
             lastNumeric = true;
         } else {
@@ -121,15 +125,24 @@ public class MainActivity extends AppCompatActivity {
                 text = txtScreen.getText().toString();
                 if (text.length() > 0) {
                     char temp = text.charAt(text.length() - 1);
-                    if (temp == '.') {
-                        lastDot = true;
-                        lastNumeric = false;
-                    } else if (temp == '+' || temp == '-' || temp == '^' || temp == '*' || temp == '/' || temp == '%') {
-                        lastNumeric = false;
-                        lastDot = false;
-                    } else {
-                        lastDot = false;
-                        lastNumeric = true;
+                    switch (temp) {
+                        case '.':
+                            lastDot = true;
+                            lastNumeric = false;
+                            break;
+                        case '+':
+                        case '-':
+                        case '^':
+                        case '*':
+                        case '/':
+                        case '%':
+                            lastNumeric = false;
+                            lastDot = false;
+                            break;
+                        default:
+                            lastDot = false;
+                            lastNumeric = true;
+                            break;
                     }
                 }
             }
@@ -168,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("DefaultLocale")
-    public String formatValue(double d) {
+    private String formatValue(double d) {
         if (d == (long) d) {
             lastDot = false;
             return String.format("%d", (long) d);
